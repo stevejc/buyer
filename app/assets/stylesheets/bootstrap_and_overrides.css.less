@@ -1,0 +1,68 @@
+@import "twitter/bootstrap/bootstrap";
+
+body { padding-top: 50px; }
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings");
+@iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
+//       have the proper paths. So for now we use the absolute path.
+@fontAwesomeEotPath: asset-path("fontawesome-webfont.eot");
+@fontAwesomeWoffPath: asset-path("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-path("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-path("fontawesome-webfont.svg");
+
+// Font Awesome
+@import "fontawesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+// Navbar
+// -------------------------
+@navbarInverseLinkColor:                 @white;
+@navbarInverseLinkColorHover:            @orange;
+@navbarInverseBackground:                rgb(28, 48, 72);
+@navbarInverseBackgroundHighlight:       rgb(28, 48, 72);
+@navbarInverseBorder:                    rgb(28, 48, 72);
+@navbarCollapseWidth: 758px;
+
+
+// Footer
+footer {
+  margin-top: 45px;
+	margin-bottom: 40px;
+  padding-top: 5px;
+  border-top: 1px solid @gray;
+}
+ 
+footer ul {
+    float: right;
+    list-style: none;   
+  }
+
+footer li {
+  float: left;
+  margin-left: 10px;
+}
+
+footer a {
+	color: black;
+}
+
+
