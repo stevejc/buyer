@@ -1,0 +1,28 @@
+<h1>Part Show</h1>
+
+<table class="table">
+  <tr>
+    <td><b>Part Name:</b></td>
+    <td>
+      <%= @part.name %>
+    </td>
+  </tr> 
+  
+  <tr>
+    <td><b>Part Number:</b></td>
+    <td>
+      <%= @part.number %>
+    </td>
+  </tr>
+  
+  <tr>
+    <td><b>Part Description:</b></td>
+    <td>
+      <%= @part.description %>
+    </td>
+  </tr>
+   
+</table>
+
+<%= link_to 'Back', parts_path, :class => 'btn' %>
+<%= link_to 'Edit', edit_part_path(@part), :class => 'btn' %>

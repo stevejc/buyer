@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+jQuery(function($) {
+	
+//fix for bootstrap button dropdown on iphone
+$(document).on('touchstart.dropdown.data-api', '.dropdown-menu', function (e) { e.stopPropagation() })
+
+// makes tr's clickable
+$("tr[data-link]").click(function() {
+  window.location = this.dataset.link
+});
+
+})
+
