@@ -6,6 +6,10 @@
 
   <%= f.label :email %>
   <%= f.text_field :email %>
+   
+  <%= f.hidden_field :is_primary %>
+  <%= f.hidden_field :updating_pw, :value => true %>
+
   
   <%= f.label :password %>
   <%= f.password_field :password %>

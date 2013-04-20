@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130113180205) do
     t.datetime "updated_at",                         :null => false
     t.string   "remember_token"
     t.integer  "account_id"
+    t.boolean  "is_primary"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"

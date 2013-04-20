@@ -4,6 +4,13 @@ class UsersController < ApplicationController
   
   def new
     @user = User.new
+    @primary = false
+  end
+  
+  def signup
+    @user = User.new
+    @user.is_primary = "true"
+    @user.updating_pw = "true"
   end
   
   def create
@@ -19,6 +26,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    
+    if @user.account_id
+    @account = Account.find(@user.account_id)
+  end
   end
   
   def edit
@@ -27,7 +38,6 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    
     if @user.update_attributes(params[:user])
       redirect_to user_path(@user), notice: "You have successfully updated your account"
     else
